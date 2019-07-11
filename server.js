@@ -18,7 +18,8 @@ app.get('/recipes/:ingredient', function (req, res) {
     let ingredient = req.params.ingredient
     request(`https://recipes-goodness.herokuapp.com/recipes/${ingredient}`, { json: true }, (err, respond, body) => {
         const data = body.results
-        console.log(data[0])
+        const receta = data.map(r => {return {ingredients: r.ingredients, title: r.title, thumbnail: r.thumbnail, href: r.href}})
+        console.log(receta)
             res.send("testing")
     })
 })
