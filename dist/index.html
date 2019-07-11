@@ -8,6 +8,7 @@
     <title>Recipes</title>
 </head>
 <body>
+    <div class="container">
     <div class="input">
         <input type="text" id="ingredient-input" placeholder="Hungry?">
         <button class="bttn" onclick="getRecipes()">Get Recepies</button>
@@ -25,11 +26,11 @@
              <div class="recipe">
                 <div class="title" onclick="location.href='{{href}}' ;" style="cursor:pointer; color: rgb(76, 0, 255); text-decoration: underline ">{{title}}</div>
                 <img class="img" src="{{thumbnail}}">
-                <div class="ingredients">Ingredients: {{{ingredients}}}</div>
+                <div class="ingredients">Ingredients: {{ingredients}}</div>
              </div>
             {{/each}}
         </script>
-
+    </div>
 
 
 

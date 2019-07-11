@@ -12,4 +12,3 @@ const getRecipes = function () {
         renderer.render({data})
     })
 }
-

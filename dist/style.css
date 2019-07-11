@@ -1,6 +1,32 @@
 body{
     background-color: aquamarine
 }
+
+#container{
+    display: grid;
+    grid-gap: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-areas: 
+    "i i i"
+    "r r r"
+
+}
+input{
+    grid-area: i;
+}
+
+.input{
+    text-align: center;
+    
+}
+#ingredient-input{
+    width: 20vh;
+}
+
+
 .recipe{
     height: 50vh;
     width: 50vh;
@@ -8,11 +34,21 @@ body{
     float: left;
     background-color: orange;
     margin: 15px;
-    border-radius: 5px
+    border-radius: 5px;
+    grid-area: r;
+    display: grid;
+    grid-template-rows: 1fr 5fr 3fr;
+    grid-template-areas:
+    "t"
+    "p"
+    "g"
+
    } 
 
    .title{
     text-align: center;
+    grid-area: t;
+
    }
 
 .img{
@@ -21,5 +57,11 @@ body{
        display: block;
        margin-left: auto;
        margin-right: auto;
-       border-radius: 5px
+       border-radius: 5px;
+       grid-area: p;
+}
+.ingredients{
+    grid-area: g;
+    margin: 2vh 2vh;
+    text-align: center;
 }
