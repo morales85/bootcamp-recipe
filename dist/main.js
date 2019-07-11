@@ -1,12 +1,15 @@
+const renderer = new Renderer()
+
 const getRecipes = function () {
     let input = $("#ingredient-input").val()
-    $.get(`/recipes/${input}`, function (ingredient) {
-        console.log(ingredient)
-        // $('.players-container').empty()
-        // const source = $('#player-template').html()
+    $.get(`/recipes/${input}`, function (data) {
+        // $('.recipes-container').empty()
+        // const source = $('#recipes-template').html()
         // const template = Handlebars.compile(source)
-        // const someHTML = template({player})
-        // $('.players-container').append(someHTML)
-        // console.log(player)
+        // const someHTML = template({data})
+        // $('.recipes-container').append(someHTML)
+        // console.log(data)
+        renderer.render({data})
     })
 }
+

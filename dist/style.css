@@ -1,0 +1,25 @@
+body{
+    background-color: aquamarine
+}
+.recipe{
+    height: 50vh;
+    width: 50vh;
+    border: 1px solid black;
+    float: left;
+    background-color: orange;
+    margin: 15px;
+    border-radius: 5px
+   } 
+
+   .title{
+    text-align: center;
+   }
+
+.img{
+       width: 30vh;
+       height: 30vh;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       border-radius: 5px
+}

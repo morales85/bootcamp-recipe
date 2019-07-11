@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <title>Recipes</title>
 </head>
 <body>
@@ -12,11 +13,30 @@
         <button class="bttn" onclick="getRecipes()">Get Recepies</button>
     </div>
 
+    <div class="recipes-container">
+        <div class="title-container"></div>
+        <div class="vid-container"></div>
+        <div class="img-container"></div>
+        <div class="ingredients-container"></div>
+    </div>
+        
+        <script id="recipes-template" type="text/x-handlebars-template">
+            {{#each data}}
+             <div class="recipe">
+                <div class="title" onclick="location.href='{{href}}' ;" style="cursor:pointer; color: rgb(76, 0, 255); text-decoration: underline ">{{title}}</div>
+                <img class="img" src="{{thumbnail}}">
+                <div class="ingredients">Ingredients: {{{ingredients}}}</div>
+             </div>
+            {{/each}}
+        </script>
+
+
 
 
 
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="jquery/dist/jquery.js"></script>
+    <script src="Renderer.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
